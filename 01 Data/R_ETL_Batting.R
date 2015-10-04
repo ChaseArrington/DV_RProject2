@@ -2,7 +2,7 @@ require(tidyr)
 require(dplyr)
 require(ggplot2)
 
-setwd("~/Desktop/CS/Data Visualization/DV_RProject2/01 Data/lahman-csv_2015-01-24")
+setwd("C:/Users/chase_000/Desktop/College/Fall 2015/Data Visualization/DV_RProject2/01 Data/lahman-csv_2015-01-24")
 
 file_path <- "Batting.csv"
 
@@ -42,7 +42,7 @@ batdf <- batdf %>% filter(as.numeric(as.character(yearID)) > 1985)
 write.csv(batdf, paste(gsub(".csv", "", file_path), ".reformatted.csv", sep=""), row.names=FALSE, na = "")
 
 Bats <- gsub(" +", "_", gsub("[^A-z, 0-9, ]", "", gsub(".csv", "", file_path)))
-sql <- paste("CREATE TABLE", Bats) 
+sql <- paste("CREATE TABLE", Bats, "(") 
 if( length(measures) > 1 || ! is.na(dimensions)) {
   for(d in dimensions) {
     sql <- paste(sql, paste(d, "varchar2(4000),\n"))

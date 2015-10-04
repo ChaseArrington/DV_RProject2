@@ -1,0 +1,35 @@
+
+
+---
+Batting Statistics Visualization
+===
+
+In this document, I will explain the steps taken to create a graphical visualizaiton of batting statistics from 2010-2015.
+
+
+###Graph 1
+
+The first graph is a visualization of all the professional players from the Houston Astros and the Texas Rangers from 2010-2015. The graph compares the intentional walks to the total home runs by players on each Texas team.
+
+```{r}
+source("../02 Data Wrangling/IBB vs HR.R", echo = TRUE)
+```
+
+
+
+###Graph 2
+
+The second graph is a visualization of all the professional players from 2010-2015. This graph compares the number of bases stolen to the times players were caught stealing by the the league each player is in.
+
+```{r}
+source("../02 Data Wrangling/Stolen Bases vs Caught Stealing.R", echo = TRUE)
+```
+
+
+###Graph 3
+
+The third graph is a visualization of all the professional players from 2010-2015. This graph compares the strikeouts versus the hits by players for each year.
+
+```{r}
+source("../02 Data Wrangling/Strikeouts vs Hits.R", echo = TRUE)
+```
